@@ -560,7 +560,7 @@ a:hover {
         color: var(--white);
         font-size: 16px; /* Adjusted font size */
         font-weight: 500;
-        margin-left: 30px;
+        margin-left: 0px;
         text-align: center;
     }
 
