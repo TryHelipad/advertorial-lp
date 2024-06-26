@@ -409,7 +409,64 @@ a:hover {
     color: var(--black);
 }
 
+.role-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
 
+.role-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.role-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Two items per row with a gap */
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Add some space between rows */
+}
+
+.role-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.role-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.role-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.role-example,
+.role-experience,
+.role-skills,
+.role-salary,
+.role-savings,
+.role-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+}
 
 
 /* Media Queries for Responsiveness */
@@ -449,6 +506,25 @@ a:hover {
     }
     .benefit-item {
         width: 90%;
+    }
+    .role-item {
+        width: 100%; /* One item per row on mobile */
+    }
+    .role-row {
+        display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: none;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        animation: fadeInUp 1s ease-out;
     }
 }
 
