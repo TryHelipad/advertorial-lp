@@ -203,6 +203,7 @@ body, html {
     font-weight: 500;
     color: #eef2f3;
     cursor: pointer;
+    width: fit-content;
 }
 
 .quiz-button:hover {
