@@ -204,6 +204,7 @@ body, html {
     color: #eef2f3;
     cursor: pointer;
     width: fit-content;
+    text-align: center;
 }
 
 .quiz-button:hover {
