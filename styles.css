@@ -508,7 +508,7 @@ a:hover {
         width: 90%;
     }
     .role-item {
-        width: 100%; /* One item per row on mobile */
+        width: 90%; /* One item per row on mobile */
     }
     .role-row {
         display: flex;
