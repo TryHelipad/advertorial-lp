@@ -85,6 +85,10 @@ body, html {
     max-width: 1200px;
     padding: 0 20px;
     animation: fadeInUp 1s ease-out;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-heading {
