@@ -85,10 +85,10 @@ body, html {
     max-width: 1200px;
     padding: 0 20px;
     animation: fadeInUp 1s ease-out;
-    justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .section-heading {
@@ -203,8 +203,8 @@ body, html {
     font-weight: 500;
     color: #eef2f3;
     cursor: pointer;
-    width: fit-content;
     text-align: center;
+    width: fit-content;
 }
 
 .quiz-button:hover {
@@ -449,6 +449,7 @@ a:hover {
     border-radius: 50%;
     float: left;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .role-title {
@@ -467,6 +468,119 @@ a:hover {
     font-weight: 400;
     color: var(--black);
 }
+
+.testimonial-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.testimonial-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.testimonial-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Two items per row with a gap */
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Add some space between rows */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.testimonial-author {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.did-you-know {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 40px; /* Add some space between sections */
+}
+
+.icon-and-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.question-mark-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.cost-comparison-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between cost boxes */
+    justify-content: space-between;
+}
+
+.cost-box {
+    background-color: var(--sky-blue);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--white);
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px; /* Add some space between rows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cost-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cost-location {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cost-detail {
+    font-size: 16px;
+    font-weight: 400;
+}
+
 
 
 /* Media Queries for Responsiveness */
@@ -507,6 +621,7 @@ a:hover {
     .benefit-item {
         width: 90%;
     }
+
     .role-item {
         width: 90%; /* One item per row on mobile */
     }
@@ -525,6 +640,37 @@ a:hover {
         max-width: 1200px;
         padding: 0 20px;
         animation: fadeInUp 1s ease-out;
+    }
+
+    .testimonial-item {
+        width: 90%; /* One item per row on mobile */
+    }
+    .testimonial-row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1200px;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .did-you-know {
+        text-align: center;
+    }
+
+    .question-mark-icon {
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .cost-comparison-content {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap for mobile */
+    }
+
+    .cost-box {
+        text-align: left;
+        margin-bottom: 10px; /* Reduce margin for mobile */
     }
 }
 
@@ -637,7 +783,6 @@ a:hover {
         font-size: 16px; /* Adjusted font size */
         font-weight: 500;
         margin-left: 0px;
-        text-align: center;
     }
 
     .sidebar {
