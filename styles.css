@@ -44,7 +44,7 @@ body, html {
     background-image: url('resources/banner-image.png');
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, .4);
+    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, .3);
     overflow: hidden;
 }
 
@@ -406,7 +406,7 @@ a:hover {
 .testimonial-author {
     font-size: 14px;
     font-weight: 600;
-    color: var(--black);
+    color: var (--black);
 }
 
 .role-list {
@@ -555,7 +555,7 @@ a:hover {
 }
 
 .cost-box {
-    background-color: var(--sky-blue);
+    background-color: #DEE4F5;
     padding: 20px;
     border-radius: 10px;
     color: var(--white);
@@ -563,6 +563,7 @@ a:hover {
     min-width: 250px;
     margin-bottom: 20px; /* Add some space between rows */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #212529;
 }
 
 .cost-box:hover {
@@ -581,7 +582,103 @@ a:hover {
     font-weight: 400;
 }
 
+.blueprint-box {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 40px; /* Add some space between sections */
+    max-width: 1200px;
+    margin: auto;
+}
 
+.blueprint-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.blueprint-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.blueprint-subheading {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.blueprint-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blueprint-list li {
+    margin-bottom: 10px;
+}
+
+.blueprint-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.blueprint-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    font-size: 16px;
+    width: 100%;
+}
+
+.blueprint-form button {
+    align-self: start;
+}
+
+.blueprint-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.blueprint-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.desktop {
+    display: none;
+}
+
+.left-align {
+    text-align: left;
+}
+
+#blueprint-text-heading {
+    display: none;
+}
+
+.section-heading.gradient-text {
+    background-image: linear-gradient(100.2deg, #0056d6, #a803f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.and-more {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark);
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
@@ -609,45 +706,6 @@ a:hover {
     .benefit-item {
         width: auto;
     }
-    .navbar {
-        position: sticky;
-        top: 0;
-        background: var(--white);
-        padding: 10px 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        display: none;
-    }
-
-    .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        background-color: #333;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-    .openbtn {
-        font-size: 20px;
-        cursor: pointer;
-        background-color: #333;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 1001;
-        display: block;
-        border-radius: 20px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -666,12 +724,12 @@ a:hover {
     }
     .role-row {
         display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    gap: 20px;
-    flex-direction: column;
-    flex-wrap: none;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: none;
     }
 
     .content-wrapper {
@@ -710,6 +768,72 @@ a:hover {
     .cost-box {
         text-align: left;
         margin-bottom: 10px; /* Reduce margin for mobile */
+    }
+
+    .blueprint-content {
+        flex-direction: column;
+    }
+
+    .blueprint-text {
+        padding-right: 0;
+    }
+
+    .blueprint-form {
+        align-items: center;
+        width: 100%;
+    }
+
+    .blueprint-form input,
+    .blueprint-form button {
+        width: 95%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .blueprint-image img {
+        width: 80%;
+    }
+    #blueprint-box-heading {
+        display: none;
+    }
+
+    #blueprint-text-heading {
+        display: block;
+    }
+
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        display: block;
+        border-radius: 20px;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        background: var(--white);
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
     }
 }
 
@@ -801,7 +925,7 @@ a:hover {
     .sidebar a {
         padding: 10px 20px 10px 20px;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 14px;
         color: #fff;
         display: block;
         transition: 0.3s;
@@ -852,4 +976,13 @@ a:hover {
 
 .fade-in-up {
     animation: fadeInUp 1s ease-out;
+}
+@media (min-width: 769px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
 }
